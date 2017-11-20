@@ -56,4 +56,5 @@ private:
 
 };
 
+
 #endif // MINIJAVA_PRINTER_H

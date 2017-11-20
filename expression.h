@@ -263,5 +263,4 @@ public:
 
     std::unique_ptr<Id> id_;
 };
-
 #endif // MINIJAVA_EXPRESSION_H

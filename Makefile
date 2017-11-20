@@ -1,7 +1,7 @@
 all: compiler
 
 clean:
-	rm compiler flex_analyzer.o syntax_analyzer.o print_visitor.o syntax_analyzer.tab.h syntax_analyzer.tab.c lex.yy.c
+	rm compiler flex_analyzer.o syntax_analyzer.o print_visitor.o syntax_analyzer.tab.h syntax_analyzer.tab.c lex.yy.c syntax_analyzer.output
 
 compiler: syntax_analyzer.o flex_analyzer.o print_visitor.o
 	g++ -g -o compiler print_visitor.o flex_analyzer.o syntax_analyzer.o -lfl --std=c++14

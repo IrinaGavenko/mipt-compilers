@@ -2,6 +2,7 @@
 
 #include <memory>
 
+
 PrintVisitor::PrintVisitor(std::string path)
 {
     output.open(path);
@@ -243,3 +244,4 @@ void PrintVisitor::printEdge(const Visitable* from, const Visitable* to, std::st
 {
     output << "node" << from << "->" << "node" << to << "[label=\"" << label << "\"]\n";
 }
+

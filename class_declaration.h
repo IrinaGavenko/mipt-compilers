@@ -77,5 +77,4 @@ public:
     Id* parameters_;
     std::vector<IStatement*> statements_;
 };
-
 #endif // MINIJAVA_CLASS_DECLARATION_H
