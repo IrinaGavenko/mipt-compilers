@@ -15,7 +15,7 @@
     void yyerror(const char* s);
     void print_();
 
-    PrintVisitor* printer = new PrintVisitor("./output.gv");
+    extern Program* root;
 %}
 
 %locations
@@ -102,8 +102,8 @@
 
 %%
 
-goal                : main_class classes END { $$ = new Program($1, $2); $$->accept(printer); print_(); }
-                    | main_class END { $$ = new Program($1, nullptr); $$->accept(printer); print_(); }
+goal                : main_class classes END { $$ = new Program($1, $2); root = $$; }
+                    | main_class END { $$ = new Program($1, nullptr); root = $$; }
                     ;
 
 main_class          : CLASS id LEFTCBRACKET
@@ -204,17 +204,6 @@ id                  : IDENTIFIER { $$ = new Id(yylval.id); print_(); }
                     ;
 
 %%
-
-int main() 
-{
-    yyin = stdin;
-    do {
-        yyparse();
-    } while(!feof(yyin));
-    delete printer;
-
-    return 0;
-}
 
 void yyerror(char const* s) 
 {
