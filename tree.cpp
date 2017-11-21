@@ -1,11 +1,11 @@
 #include "print_visitor.h"
 #include "syntax_analyzer.tab.h"
 
-extern Program* root;
+Program* root;
 
 int main(void) {
 	yyparse();
-	PrintVisitor* printer = new PrintVisitor("./output.gv");
+	PrintVisitor* printer = new PrintVisitor("./tree_output.gv");
 	root->accept(printer);
 	delete printer;	
 }
