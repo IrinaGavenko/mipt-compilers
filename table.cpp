@@ -1,10 +1,10 @@
 #include "syntax_analyzer.tab.h"
-#inlcude ""
+#include "new_visitor.h"
 
 Program* root;
 
 int main(void) {
 	yyparse();
-	tableNS::... visitor = new tableNS::...
-	...
+	tableNS::newVisitor visitor = new tableNS::newVisitor()
+	visitor.ParseProgram(root);
 }
