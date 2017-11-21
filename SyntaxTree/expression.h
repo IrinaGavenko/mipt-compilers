@@ -1,7 +1,7 @@
 #ifndef MINIJAVA_EXPRESSION_H
 #define MINIJAVA_EXPRESSION_H
 
-#include "visitor.h"
+#include "../visitor.h"
 
 #include <vector>
 #include <string>

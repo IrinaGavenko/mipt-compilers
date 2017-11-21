@@ -1,17 +1,17 @@
 #ifndef MINIJAVA_PRINTER_H
 #define MINIJAVA_PRINTER_H
 
-#include "program.h"
-#include "argument.h"
-#include "class_declaration.h"
-#include "expression.h"
-#include "id.h"
-#include "method_declaration.h"
-#include "method_modifier.h"
+#include "SyntaxTree/program.h"
+#include "SyntaxTree/argument.h"
+#include "SyntaxTree/class_declaration.h"
+#include "SyntaxTree/expression.h"
+#include "SyntaxTree/id.h"
+#include "SyntaxTree/method_declaration.h"
+#include "SyntaxTree/method_modifier.h"
 #include "print_visitor.h"
-#include "statement.h"
-#include "type.h"
-#include "var_declaration.h"
+#include "SyntaxTree/statement.h"
+#include "SyntaxTree/type.h"
+#include "SyntaxTree/var_declaration.h"
 
 #include <string>
 #include <fstream>

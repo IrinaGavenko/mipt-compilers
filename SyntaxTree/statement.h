@@ -1,8 +1,8 @@
 #ifndef MINIJAVA_STATEMENT_H
 #define MINIJAVA_STATEMENT_H
 
-#include "visitable.h"
-#include "visitor.h"
+#include "../visitable.h"
+#include "../visitor.h"
 #include "method_declaration.h"
 
 #include <vector>

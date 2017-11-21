@@ -1,7 +1,7 @@
 #ifndef MINIJAVA_VAR_DECLARATION_H
 #define MINIJAVA_VAR_DECLARATION_H
 
-#include "visitor.h"
+#include "../visitor.h"
 #include <vector>
 #include <memory>
 

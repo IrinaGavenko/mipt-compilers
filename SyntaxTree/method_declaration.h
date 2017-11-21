@@ -1,7 +1,7 @@
 #ifndef MINIJAVA_METHOD_DECLARATION_H
 #define MINIJAVA_METHOD_DECLARATION_H
 
-#include "visitor.h"
+#include "../visitor.h"
 #include "var_declaration.h"
 #include "statement.h"
 #include "argument.h"

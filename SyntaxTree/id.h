@@ -1,7 +1,7 @@
 #ifndef MINIJAVA_ID_H
 #define MINIJAVA_ID_H
 
-#include "visitor.h"
+#include "../visitor.h"
 #include <string>
 
 class Id: public Visitable

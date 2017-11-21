@@ -1,7 +1,7 @@
 #ifndef MINIJAVA_METHOD_MODIFIER_H
 #define MINIJAVA_METHOD_MODIFIER_H
 
-#include "visitor.h"
+#include "../visitor.h"
 
 enum MethodModifierValue
 {

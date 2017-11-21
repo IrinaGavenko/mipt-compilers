@@ -1,7 +1,7 @@
 #ifndef MINIJAVA_ARGUMENT_H
 #define MINIJAVA_ARGUMENT_H
 
-#include "visitable.h"
+#include "../visitable.h"
 #include <vector>
 #include <memory>
 

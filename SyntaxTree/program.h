@@ -1,7 +1,7 @@
 #ifndef MINIJAVA_PROGRAM_H
 #define MINIJAVA_PROGRAM_H
 
-#include "visitor.h"
+#include "../visitor.h"
 #include "class_declaration.h"
 
 #include <vector>
