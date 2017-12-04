@@ -2,21 +2,18 @@
 #define DECLARATION_EXCEPTION_H
 
 #include <string>
-#include <Symbol.h>
+#include "Position.h"
 
-namespace tableNS {
+namespace SymbolTable {
 
-    class DeclarationException : public std::exception {
-    public:
-        virtual char const *what() const noexcept override;
-
-        DeclarationException(const std::string &message, const Position &position);
-
-        virtual ~DeclarationException() throw() {}
-
-    private:
-        std::string msgresult;
-    };
+class DeclarationException : public std::exception {
+public:
+    virtual char const* what() const noexcept override;
+    DeclarationException( const std::string& message, const Position& position );
+    virtual ~DeclarationException() throw() {}
+private:
+    std::string msgresult;
+};
 
 }
 

@@ -1,10 +1,10 @@
-#include "syntax_analyzer.tab.h"
-#include "new_visitor.h"
+#include "VSymbolTable/TableVisitor.h"
+#include "tokens.h"
 
-Program* root;
+extern std::unique_ptr<AST::Program> program;
 
 int main(void) {
-	yyparse();
-	tableNS::newVisitor visitor = new tableNS::newVisitor()
-	visitor.ParseProgram(root);
+  yyparse();
+  SymbolTable::TableVisitor visitor;
+  visitor.ParseProgram(program.get());
 }

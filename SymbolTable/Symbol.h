@@ -1,56 +1,31 @@
 #pragma once
 
 #include <string>
-#include <memory>
+#include <StringSymbol.h>
+#include <Position.h>
 
-namespace tableNS {
+namespace SymbolTable { 
 
-    class Position {
-    public:
-        Position(int _x, int _y);
-	std::string ToString() const;
-    private:
-        int x;
-        int y;
-    };
+class Symbol {
+public:
+  Symbol(std::string name, Position& position);
+  Symbol(StringSymbol* name, Position& position);
 
-    class StringSymbol {
-    public:
-        static StringSymbol *GetIntern(const std::string &name);
-        const std::string &GetString() const { return body; }
+  Symbol( const Symbol& ) = delete;
+  void operator=( const Symbol& ) = delete;
 
-    private:
-        std::string body;
-        StringSymbol(std::string name) : body(name) {}
-        StringSymbol(const StringSymbol &) = delete;
+  bool operator ==( const Symbol& a );
+  bool operator !=( const Symbol& a );
 
-        void operator=(const StringSymbol &) = delete;
-    };
+  virtual ~Symbol() {};
 
-    class Symbol {
-    public:
-        Symbol(std::string name, Position &position);
+  const StringSymbol* GetName() const { return name; }
+  const Position& GetPosition() const { return position; }
 
-        Symbol(StringSymbol *name, Position &position);
+protected:
+  const StringSymbol* name;
+  const Position position;
 
-        Symbol(const Symbol &) = delete;
-
-        void operator=(const Symbol &) = delete;
-
-        bool operator==(const Symbol &a);
-
-        bool operator!=(const Symbol &a);
-
-        virtual ~Symbol() {};
-
-        const StringSymbol *GetName() const { return name; }
-
-        const Position &GetPosition() const { return position; }
-
-    protected:
-        const StringSymbol *name;
-        const Position position;
-
-    };
+};
 
 }
